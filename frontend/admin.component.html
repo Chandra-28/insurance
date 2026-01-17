@@ -1,0 +1,15 @@
+<h2>Admin Panel</h2>
+<table>
+  <tr>
+    <th>Claim No</th><th>Description</th><th>Status</th><th>Actions</th>
+  </tr>
+  <tr *ngFor="let claim of claims">
+    <td>{{claim.claimNumber}}</td>
+    <td>{{claim.description}}</td>
+    <td>{{claim.status}}</td>
+    <td>
+      <button (click)="approve(claim.id)">Approve</button>
+      <button (click)="reject(claim.id)">Reject</button>
+    </td>
+  </tr>
+</table>
